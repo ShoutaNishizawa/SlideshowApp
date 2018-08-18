@@ -12,6 +12,10 @@
 		5C85D15421237CF300993A86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C85D15221237CF300993A86 /* Main.storyboard */; };
 		5C85D15621237CF400993A86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C85D15521237CF400993A86 /* Assets.xcassets */; };
 		5C85D15921237CF400993A86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C85D15721237CF400993A86 /* LaunchScreen.storyboard */; };
+		5C85D1872126C77A00993A86 /* catfree.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5C85D1862126C77A00993A86 /* catfree.jpg */; };
+		5C85D1892126CBBA00993A86 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C85D1882126CBBA00993A86 /* ResultViewController.swift */; };
+		5C85D18B2126D1F300993A86 /* catfree2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5C85D18A2126D1F300993A86 /* catfree2.jpg */; };
+		5C85D18D2126D29600993A86 /* catfree3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5C85D18C2126D29600993A86 /* catfree3.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		5C85D15521237CF400993A86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C85D15821237CF400993A86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C85D15A21237CF400993A86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C85D1862126C77A00993A86 /* catfree.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = catfree.jpg; sourceTree = "<group>"; };
+		5C85D1882126CBBA00993A86 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		5C85D18A2126D1F300993A86 /* catfree2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = catfree2.jpg; sourceTree = "<group>"; };
+		5C85D18C2126D29600993A86 /* catfree3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = catfree3.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,12 +62,16 @@
 		5C85D14D21237CF300993A86 /* SlideshowApp */ = {
 			isa = PBXGroup;
 			children = (
-				5C85D14E21237CF300993A86 /* AppDelegate.swift */,
 				5C85D15021237CF300993A86 /* ViewController.swift */,
+				5C85D14E21237CF300993A86 /* AppDelegate.swift */,
 				5C85D15221237CF300993A86 /* Main.storyboard */,
 				5C85D15521237CF400993A86 /* Assets.xcassets */,
+				5C85D18C2126D29600993A86 /* catfree3.jpg */,
+				5C85D18A2126D1F300993A86 /* catfree2.jpg */,
+				5C85D1862126C77A00993A86 /* catfree.jpg */,
 				5C85D15721237CF400993A86 /* LaunchScreen.storyboard */,
 				5C85D15A21237CF400993A86 /* Info.plist */,
+				5C85D1882126CBBA00993A86 /* ResultViewController.swift */,
 			);
 			path = SlideshowApp;
 			sourceTree = "<group>";
@@ -122,9 +134,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C85D18D2126D29600993A86 /* catfree3.jpg in Resources */,
+				5C85D18B2126D1F300993A86 /* catfree2.jpg in Resources */,
 				5C85D15921237CF400993A86 /* LaunchScreen.storyboard in Resources */,
 				5C85D15621237CF400993A86 /* Assets.xcassets in Resources */,
 				5C85D15421237CF300993A86 /* Main.storyboard in Resources */,
+				5C85D1872126C77A00993A86 /* catfree.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +152,7 @@
 			files = (
 				5C85D15121237CF300993A86 /* ViewController.swift in Sources */,
 				5C85D14F21237CF300993A86 /* AppDelegate.swift in Sources */,
+				5C85D1892126CBBA00993A86 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
