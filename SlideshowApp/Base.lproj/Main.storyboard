@@ -13,7 +13,6 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SlideshowApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -77,8 +76,10 @@
                         <outlet property="OutletNext" destination="gaX-N3-wL6" id="98h-58-afN"/>
                         <outlet property="OutletPrev" destination="CNf-F4-aYn" id="X4e-xr-u2t"/>
                         <outlet property="imageView" destination="tom-Ef-aVi" id="tRo-tr-EGo"/>
+                        <outlet property="startPauseButton" destination="gCJ-bf-Ll7" id="kpR-st-OqL"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>

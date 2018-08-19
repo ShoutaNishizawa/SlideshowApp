@@ -12,9 +12,37 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var OutletNext: UIButton!
     @IBOutlet weak var OutletPrev: UIButton!
+    @IBOutlet weak var startPauseButton: UIButton!
     @IBOutlet weak var imageView: UIImageView!
     
     var timer: Timer?
+    
+    var dispImageNo = 0
+    
+    let imageNameArray: [String] = [
+        
+        "catfree.jpg",
+        "catfree2.jpg",
+        "catfree3.jpg",
+        
+        ]
+    
+    let name = imageNameArray[dispImageNo]
+    let image = UIImage(named: name)
+    
+    func displayImage() {
+        
+        if dispImageNo < 0 {
+            dispImageNo = 2
+        }
+        
+        if dispImageNo > 2 {
+            dispImageNo = 0
+        }
+        
+        imageView.image = image
+    }
+    
     
     @IBAction func onPrev(_ sender: Any) {
         
@@ -24,44 +52,28 @@ class ViewController: UIViewController {
     
     
     @IBAction func onNext(_ sender: Any) {
+        
         dispImageNo += 1
         displayImage()
-    }
-    
-    var dispImageNo = 0
-    
-    func displayImage() {
-        
-        let imageNameArray = [
-        
-        "catfree.jpg",
-        "catfree2.jpg",
-        "catfree3.jpg",
-        
-        ]
-    
-        if dispImageNo < 0 {
-            dispImageNo = 2
-        }
-        
-        if dispImageNo > 2 {
-            dispImageNo = 0
-        }
-        
-    let name = imageNameArray[dispImageNo]
-    
-    let image = UIImage(named: name)
-    imageView.image = image
-        
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let image = UIImage(named: "catfree.jpg")
-        imageView.image = image
+        if let imageName = imageNameArray.first {
+            let image = UIImage(named: imageName)
+            imageView.image = image
+        }
         
+        startPauseButton.setTitle("再生", for: .normal)
+    }
+    
+    
+    @objc func onTimer(timer: Timer) {
+        
+        dispImageNo += 1
+        displayImage()
     }
     
     
@@ -71,6 +83,7 @@ class ViewController: UIViewController {
             
             timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(onTimer(timer:)), userInfo: nil, repeats: true)
             
+            startPauseButton.setTitle("停止", for: .normal)
             OutletNext.isEnabled = false
             OutletPrev.isEnabled = false
             
@@ -79,29 +92,33 @@ class ViewController: UIViewController {
             self.timer?.invalidate()
             self.timer = nil
             
+            startPauseButton.setTitle("再生", for: .normal)
             OutletNext.isEnabled = true
             OutletPrev.isEnabled = true
         }
     }
     
-    @objc func onTimer(timer: Timer) {
-        
-        dispImageNo += 1
-        
-        displayImage()
-    }
-
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let resultViewController:ResultViewController = segue.destination as! ResultViewController
-        resultViewController.resultDispImageNo = dispImageNo
+        
+        resultViewController.resultImage = image
+        
+        self.timer?.invalidate()
     }
     
-
+    
     @IBAction func unwind(_ segue: UIStoryboardSegue) {
-}
+        
+        self.timer = nil
+        startPauseButton.setTitle("再生", for: .normal)
+        OutletNext.isEnabled = true
+        OutletPrev.isEnabled = true
+    }
+    
 }

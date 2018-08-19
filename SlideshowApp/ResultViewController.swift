@@ -12,24 +12,12 @@ class ResultViewController: UIViewController {
 
     @IBOutlet weak var zoomImage: UIImageView!
 
-    
-    
-    var resultDispImageNo: Int?
-    
-    let resultImageNameArray = [
-        
-        "catfree.jpg",
-        "catfree2.jpg",
-        "catfree3.jpg",
-        
-        ]
+    var resultImage: UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-         let name = resultImageNameArray[resultDispImageNo!]
-        let image = UIImage(named: name)
-        zoomImage.image = image
+        zoomImage.image = resultImage
     }
 
     override func didReceiveMemoryWarning() {
