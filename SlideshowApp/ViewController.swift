@@ -27,8 +27,8 @@ class ViewController: UIViewController {
         
         ]
     
-    let name = imageNameArray[dispImageNo]
-    let image = UIImage(named: name)
+    var name: String?
+    var image: UIImage?
     
     func displayImage() {
         
@@ -66,6 +66,8 @@ class ViewController: UIViewController {
             imageView.image = image
         }
         
+        name = imageNameArray[dispImageNo]
+        image = UIImage(named: name!)
         startPauseButton.setTitle("再生", for: .normal)
     }
     
