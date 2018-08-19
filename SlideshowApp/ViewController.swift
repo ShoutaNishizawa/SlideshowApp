@@ -27,8 +27,6 @@ class ViewController: UIViewController {
         
         ]
     
-    var name: String?
-    var image: UIImage?
     
     func displayImage() {
         
@@ -40,7 +38,7 @@ class ViewController: UIViewController {
             dispImageNo = 0
         }
         
-        imageView.image = image
+        imageView.image = UIImage(named: imageNameArray[dispImageNo])
     }
     
     
@@ -66,8 +64,6 @@ class ViewController: UIViewController {
             imageView.image = image
         }
         
-        name = imageNameArray[dispImageNo]
-        image = UIImage(named: name!)
         startPauseButton.setTitle("再生", for: .normal)
     }
     
@@ -109,7 +105,7 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let resultViewController:ResultViewController = segue.destination as! ResultViewController
         
-        resultViewController.resultImage = image
+        resultViewController.resultImage = imageView.image
         
         self.timer?.invalidate()
     }
