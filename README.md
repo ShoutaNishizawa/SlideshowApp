@@ -1,5 +1,7 @@
 # SlideshowApp
 
+![demo](https://github.com/amaocha-first/SlideshowApp/images/slideShowAppDemo.gif)
+
 TechAcademyの課題で制作したものです。(2018年8月)  
 要件が事前に細かく指定されており、それに従って一から自分で調べながら作っていくという課題でした。
 
